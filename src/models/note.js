@@ -14,18 +14,10 @@ export const Note = sequelize.define("note", {
   content: {
     type: DataTypes.STRING(200),
   },
-  user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: User,
-      key: "id",
-    },
-  },
 });
 
-Note.belongsTo(User, {
-  foreignKey: "user_id",
-  onUpdate: "CASCADE",
+User.hasMany(Note, {
   onDelete: "CASCADE",
+  onUpdate: "CASCADE",
 });
+Note.belongsTo(User);

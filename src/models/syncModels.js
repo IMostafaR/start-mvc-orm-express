@@ -4,7 +4,7 @@ import { User } from "./user.js";
 
 export default (async () => {
   try {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: false, alter: true });
     console.log("Models synced successfully");
   } catch (error) {
     console.error("Error syncing models:", error);

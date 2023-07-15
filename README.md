@@ -65,7 +65,7 @@ The file structure of the project is as follows:
 #### Sign in
 
 - URL: `/users/signin`
-- Method: `GET`
+- Method: `POST`
 
 - Request body:
 

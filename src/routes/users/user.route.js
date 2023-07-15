@@ -23,7 +23,7 @@ userRouter.post(`${path}/signup`, isEmailExist, signUp);
 
 // -----------------------------------
 // Sign in
-userRouter.get(`${path}/signin`, signIn);
+userRouter.post(`${path}/signin`, signIn);
 
 // -----------------------------------
 // update user
